@@ -11,7 +11,9 @@
     "lint:ignore": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --no-ignore",
     "lint:fix": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
     "format:fix": "prettier --write \"./**/*.{ts,tsx,css}\"",
-    "stylelint": "npx stylelint \"**/*.{css,scss,less}\" --fix"
+    "stylelint": "npx stylelint \"**/*.{css,scss,less}\" --fix",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
@@ -37,6 +39,7 @@
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-simple-import-sort": "^12.1.1",
+    "gh-pages": "^6.3.0",
     "globals": "^15.14.0",
     "path": "^0.12.7",
     "path-type": "^6.0.0",
