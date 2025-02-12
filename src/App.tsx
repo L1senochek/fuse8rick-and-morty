@@ -1,9 +1,11 @@
 import './App.css';
 
+import MainPage from './pages/MainPage/MainPage.tsx';
+
 function App() {
   return (
     <>
-      <div>123</div>
+      <MainPage />
     </>
   );
 }
