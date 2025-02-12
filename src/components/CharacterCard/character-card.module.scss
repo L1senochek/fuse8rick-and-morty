@@ -1,0 +1,113 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 7px 25px hsl(240deg 5% 41% / 20%);
+  grid-column: span 2;
+  width: 100%;
+  max-width: 518px;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px;
+
+  &:nth-child(1),
+  &:nth-child(2){
+  max-width: 788px;
+  }
+
+
+  &:nth-child(1) {
+  grid-column: 1 / span 3;
+  }
+
+  &:nth-child(2) {
+  grid-column: 4 / span 3;
+
+  }
+
+  &__link {
+      display: flex;
+      flex: 1;
+      width: 100%;
+      justify-content: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 34px;
+    justify-content: space-between;
+  }
+
+  &__title {
+    display: flex;
+    margin: 0;
+    font-family: "Fira Sans", sans-serif;
+    font-size: clamp(20px, 2.5vw, 30px);
+    font-weight: 400;
+    color: hsl(0deg 3% 15%);
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: hsl(0deg 0% 46%);
+    font-family: Montserrat, sans-serif;
+    font-size: clamp(12px, 1.25vw, 14px);
+
+    & > p {
+      margin: 0;
+    }
+  }
+
+  &__status {
+    & > *{
+      font-weight: 700;
+    }
+
+    & > .unknown {
+      color: hsl(0deg 0% 46%);
+    }
+
+    & > .alive {
+      color: hsl(102deg 93% 24%);
+    }
+
+    & > .dead {
+      color: hsl(0deg 86% 27%);
+    }
+  }
+  &__created {}
+}
+
+@media (width <= 1500px) {
+  .card {
+    &__title {
+      font-size: clamp(20px, 1vw, 30px);
+    }
+  }
+}
+
+@media (width <= 950px) {
+  .card {
+    grid-column: unset;
+
+    &:nth-child(1),
+    &:nth-child(2){
+      grid-column: unset;
+    }
+  }
+}
+
+@media (width <= 600px) {
+  .card {
+    max-width: none;
+
+    &:nth-child(1),
+    &:nth-child(2){
+      max-width: none;
+    }
+  }
+}
