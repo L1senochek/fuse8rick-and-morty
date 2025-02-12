@@ -3,8 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgb(255 255 255 / 87%);
-  background-color: hsl(0deg 0% 14%);
+  color: hsl(0deg 3% 15%);
+  background-color: hsl(0deg 0% 100%);
   font-synthesis: none;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
@@ -55,17 +55,3 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: hsl(208deg 37% 20%);
-    background-color: hsl(0deg 0% 100%);
-  }
-
-  a:hover {
-    color: hsl(237deg 100% 73%);
-  }
-
-  button {
-    background-color: hsl(0deg 0% 98%);
-  }
-}
